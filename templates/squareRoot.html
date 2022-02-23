@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Square Root | CoSH{% endblock %}
+{% block content %}
+    <!-- Hero Sections -->
+    <div class="main" style="padding-top: 80px;">
+        <div class="main_container">
+            <div class="main_img-container">
+                <img src="{{ url_for('static', filename='images/square_root.svg') }}" alt="Picture 5" id="squareRoot_img">
+            </div>
+            <div class="main_content left-content">
+                <h1>CoSH</h1>
+                <h2>Square Root</h2>
+                <p>Find a square root of a number in here!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main"><div class="divider"></div></div>
+
+    <!-- Square Root Sections -->
+    <div class="main">
+        <div class="containers">
+            <div class="main_content">
+                <h2>Square Root</h2>
+                <p class="paragraph">Input the number so that we can calculate the square root of the number you entered. <br>Please do not worry, your input will not be saved.</p>
+
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 mb-4 mx-auto">
+                            <label for="number" class="form-label" style="font-size: 1.5rem;">Number</label>
+                            <input type="number" class="form-control form-control-lg" name="num" id="num" required>
+                        </div>
+                    </div>
+                            
+                    <div class="row">
+                        <div class="text-center">
+                            <button class="btn btn-green col-lg-4 col-md-6 mb-4 mt-2" type="button" onclick="squareRoot()" id="btnSquareRootClick">
+                                <i class="fa-solid fa-magnifying-glass"></i> Find The Square Root
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 mb-3 mx-auto">
+                        <p class="paragraph pb-0">Result</p>
+                        <div class="red_header text-center" id="squareRootResult" style="color: #fff;">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main"><div class="divider"></div></div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/squareRoot.js') }}"></script>
+{% endblock %}

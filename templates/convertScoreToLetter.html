@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Convert Score from Number to Letter | CoSH{% endblock %}
+{% block content %}
+    <!-- Hero Sections -->
+    <div class="main" style="padding-top: 80px;">
+        <div class="main_container">
+            <div class="main_content">
+                <h1>CoSH</h1>
+                <h2>Convert Score from Number to Letter</h2>
+                <p>Know your score in letter here!</p>
+            </div>
+            <div class="main_img-container left-content">
+                <img src="{{ url_for('static', filename='images/convertNumToLetter.svg') }}" alt="Picture 4" id="convert_img">
+            </div>
+        </div>
+    </div>
+
+    <div class="main"><div class="divider"></div></div>
+
+    <!-- Convert Num to Letter Sections -->
+    <div class="main">
+        <div class="containers">
+            <div class="main_content">
+                <h1>Convert Score from Number to Letter</h1>
+                <p class="paragraph">Input your score so that we can convert it to a letter. <br>Please do not worry, your score will not be saved.</p>
+
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 mb-4 mx-auto">
+                            <label for="score" class="form-label" style="font-size: 1.5rem;">Score</label>
+                            <input type="number" class="form-control form-control-lg" name="score" id="score" required>
+                        </div>
+                    </div>
+                            
+                    <div class="row">
+                        <div class="text-center">
+                            <button class="btn btn-green col-lg-4 col-md-6 mb-4 mt-2" type="button" onclick="convert()" id="btnConvertClick">
+                                <i class="fa-solid fa-arrows-rotate"></i> Convert
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 mb-3 mx-auto">
+                        <p class="paragraph pb-0">Your Score</p>
+                        <div class="blue_header text-center" id="convertResult" style="color: #fff;">
+                            -
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5" style="align-items: center; justify-content: center;">
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <ul class="score-list">
+                            <li class="letter-list">A&nbsp;&nbsp;&nbsp;&nbsp;= 85 - 100</li>
+                            <li class="letter-list">A-&nbsp;&nbsp;= 80 - 84</li>
+                            <li class="letter-list">B+&nbsp;&nbsp;= 75 - 79</li>
+                            <li class="letter-list">B&nbsp;&nbsp;&nbsp;&nbsp;= 70 - 74</li>
+                            <li class="letter-list">B-&nbsp;&nbsp;= 67 - 69</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <ul class="score-list">
+                            <li class="letter-list">C+&nbsp;&nbsp;= 65 - 66</li>
+                            <li class="letter-list">C&nbsp;&nbsp;&nbsp;&nbsp;= 60 - 64</li>
+                            <li class="letter-list">D&nbsp;&nbsp;&nbsp;&nbsp;= 55 - 59</li>
+                            <li class="letter-list">D-&nbsp;&nbsp;= 50 - 54</li>
+                            <li class="letter-list">E&nbsp;&nbsp;&nbsp;&nbsp;= < 50</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main"><div class="divider"></div></div>
+    <div class="main"><div class="divider"></div></div>
+    <div class="main"><div class="divider"></div></div>
+    <div class="main"><div class="divider"></div></div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/convertNumToLetter.js') }}"></script>
+{% endblock %}

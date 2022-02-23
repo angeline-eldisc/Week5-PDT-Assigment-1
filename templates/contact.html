@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}Contact | CoSH{% endblock %}
+{% block content %}
+    <!-- Hero Sections -->
+    <div class="main" style="padding-top: 80px;">
+        <div class="main_container">
+            <div class="main_content">
+                <h1>CoSH</h1>
+                <h2>Contact</h2>
+                <p>Leave your contact info here</p>
+            </div>
+            <div class="main_img-container">
+                <img src="{{ url_for('static', filename='images/contact.svg') }}" alt="Picture 7" id="contact_img">
+            </div>
+        </div>
+    </div>
+
+    <div class="main"><div class="divider"></div></div>
+
+    <!-- Contact Sections -->
+    <div class="main">
+        <div class="containers">
+            <div class="main_content" style="text-align: left;">
+                <h2>Contact</h2>
+                <div class="row mt-5">
+                    <div class="col-md-8">
+                        <form action="#" autocomplete="off">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fname" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="fname" required>
+                                </div>
+            
+                                <div class="col-md-6 mb-3">
+                                    <label for="lname" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lname" required>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                        <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" cols="30" rows="10" required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 text-center">
+                                <button class="btn btn-green" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="col-md-4">                        
+                        <div class="contact_container">
+                            <div class="contact_list">
+                                <i class="fa-solid fa-envelope contact_icon"></i>
+                                <span>cosh@mail.com</span>
+                            </div>
+                            <div class="contact_list">
+                                <i class="fa-solid fa-phone contact_icon"></i>
+                                <span>+1 819 3628 3743</span>
+                            </div>
+                            <div class="contact_list">
+                                <i class="fa-solid fa-fax contact_icon"></i>
+                                <span>(021) 5193 2730</span>
+                            </div>
+                            <div class="contact_list">
+                                <i class="fa-solid fa-map-location-dot contact_icon"></i>
+                                <span>30750 Beechwood St Wixom, Michigan(MI), 48393</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main"><div class="divider"></div></div>
+    <div class="main"><div class="divider"></div></div>
+{% endblock %}

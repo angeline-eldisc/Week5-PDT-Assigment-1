@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}Hypotenuse | CoSH{% endblock %}
+{% block content %}
+    <!-- Hero Sections -->
+    <div class="main" style="padding-top: 80px">
+        <div class="main_container">
+            <div class="main_content">
+                <h1>CoSH</h1>
+                <h2>Hypotenuse</h2>
+                <p>Find a hypotenuse of a triangle in here!</p>
+            </div>
+            <div class="main_img-container left-content">
+                <img src="{{ url_for('static', filename='images/hypotenuse.svg') }}" alt="Picture 6" id="hypotenuse_img">
+            </div>
+        </div>
+    </div>
+
+    <div class="main"><div class="divider"></div></div>
+
+    <!-- Convert Num to Letter Sections -->
+    <div class="main">
+        <div class="containers">
+            <div class="main_content">
+                <h1>Hypotenuse</h1>
+                <p class="paragraph">Input the base and the altitude so that we calculate the hypotenuse of a triangle. <br>Please do not worry, your input will not be saved.</p>
+
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 mb-3 mx-auto">
+                            <label for="base" class="form-label" style="font-size: 1.5rem">Base</label>
+                            <input type="number" class="form-control form-control-lg" name="base" id="base" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 mb-4 mx-auto">
+                            <label for="altitude" class="form-label" style="font-size: 1.5rem" >Altitude</label>
+                            <input type="number" class="form-control form-control-lg" name="altitude" id="altitude" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="text-center">
+                            <button class="btn btn-green col-lg-4 col-md-6 mb-4 mt-2" type="button" onclick="hypotenuse()" id="btnhypotenuseClick">
+                                <i class="fa-solid fa-magnifying-glass"></i> Find The Hypotenuse
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 mb-3 mx-auto">
+                        <p class="paragraph pb-0">Result</p>
+                        <div class="blue_header text-center" id="hypotenuseResult" style="color: #fff" >
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main"><div class="divider"></div></div>
+    <div class="main"><div class="divider"></div></div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/hypotenuse.js') }}"></script>
+{% endblock %}

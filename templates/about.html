@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}About | CoSH{% endblock %}
+{% block content %}
+    <!-- Hero Sections -->
+    <div class="main" style="padding-top: 80px;">
+        <div class="main_container">
+            <div class="main_img-container">
+                <img src="{{ url_for('static', filename='images/about.svg') }}" alt="Picture 3" id="about_img">
+            </div>
+            <div class="main_content left-content">
+                <h1>CoSH</h1>
+                <h2>About</h2>
+                <p>All about this website is in here.</p>
+                <a href="#about">
+                    <button class="main_btn">
+                        Read More
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" id="about"><div class="divider"></div></div>
+
+    <!-- About Sections -->
+    <div class="main">
+        <div class="containers">
+            <div class="main_content">
+                <h2>About</h2>
+                <p class="paragraph">CoSH is a website that helps students to convert their score intro letter, find a square root of a number, and find a hypotenuse of the triangle. The name 'CoSH' itself is an abbreviation from <u>Co</u>nvert, <u>S</u>quare root, and <u>H</u>ypotenuse. CoSH will help many students to solve simple math problems. This website's purpose is to fulfill my assignment in Psychology and Design Thinking Subject. Hopefully, this website can be helpful for someone who needs it.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
